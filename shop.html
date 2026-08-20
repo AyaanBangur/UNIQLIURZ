@@ -27,13 +27,4 @@
 <article class="shop-card visible" data-categories="engraved decor personalized"><a class="shop-card-link" href="product.html?id=engraved-cutting-board"><div class="shop-photo"><img src="assets/engraved-cutting-board.png" alt="Engraved marble and wood serving board"></div><div class="shop-meta"><div><h3>Engraved Wood &amp; Marble Cutting Board</h3><p>A marble-and-acacia serving board laser-engraved with a name, logo, or message — a keepsake gift with everyday use.</p></div><span>From $62</span></div></a></article>
 <p class="empty" id="empty-state">New pieces are on their way. Start a custom order and we will make it with you.</p></div><div class="custom-note"><div><h3>Want something completely different?</h3><p>Tell us your idea and we will help you create a custom piece.</p></div><a class="button" href="contact.html">Start a custom order →</a></div><section class="feature"><img src="assets/craft-studio.png" alt="Illustrated UNIQLIURZ studio workspace with laser engraver, resin, and craft supplies"><div class="feature-copy"><div class="eyebrow">Custom made</div><h2>Your story, in every layer.</h2><p>Send your name, preferred colours, occasion, and any special details. We will confirm the design before we begin.</p><a class="button" href="contact.html">Personalize A Piece →</a></div></section></section></main>
 <footer><div class="wrap"><a class="logo" href="index.html">uniqli<em>•</em>urz</a><p>Where Every Creation Tells A Story</p></div></footer><script>const tabs=document.querySelectorAll('[data-filter]'),cards=document.querySelectorAll('.shop-card'),empty=document.getElementById('empty-state');function filter(category){let shown=0;tabs.forEach(tab=>tab.classList.toggle('active',tab.dataset.filter===category));cards.forEach(card=>{const display=category==='all'||card.dataset.categories.includes(category);card.classList.toggle('visible',display);if(display)shown++});empty.style.display=shown?'none':'block'}tabs.forEach(tab=>tab.addEventListener('click',()=>filter(tab.dataset.filter)));const requested=new URLSearchParams(location.search).get('category');const map={gifts:'all'};filter(map[requested]||requested||'all');
-document.querySelectorAll('.shop-photo img').forEach(img=>{
-  function checkFit(){
-    const box=img.parentElement;
-    const boxRatio=box.clientWidth/box.clientHeight;
-    const imgRatio=img.naturalWidth/img.naturalHeight;
-    if(!imgRatio||!boxRatio)return;
-    if(imgRatio/boxRatio<0.62||imgRatio/boxRatio>1.65){img.classList.add('fit-contain')}
-  }
-  if(img.complete&&img.naturalWidth)checkFit();else img.addEventListener('load',checkFit);
-});</script></body></html>
+</script></body></html>

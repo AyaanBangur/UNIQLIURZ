@@ -38,18 +38,9 @@ if (product) {
   document.title = product.name + " — UNIQLIURZ";
   const img = document.getElementById('p-img');
   const thumbs = document.getElementById('p-thumbs');
-  function checkFit(){
-    const box = img.parentElement;
-    const boxRatio = box.clientWidth / box.clientHeight;
-    const imgRatio = img.naturalWidth / img.naturalHeight;
-    img.classList.remove('fit-contain');
-    if (!imgRatio || !boxRatio) return;
-    if (imgRatio/boxRatio < 0.62 || imgRatio/boxRatio > 1.65) { img.classList.add('fit-contain'); }
-  }
   function showImage(src, i){
     img.src = src;
     img.alt = product.alt;
-    if (img.complete && img.naturalWidth) checkFit(); else img.addEventListener('load', checkFit, {once:true});
     [...thumbs.children].forEach((b,bi) => b.classList.toggle('active', bi === i));
   }
   showImage(product.images[0], 0);
