@@ -1,65 +1,72 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Product — UNIQLIURZ</title><link rel="stylesheet" href="pages.css"><style>.product-view{padding:60px 0 90px}.back-link{display:inline-block;margin-bottom:28px;font:500 12px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}.back-link:hover{color:var(--orange)}.product-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:60px;align-items:start}.product-layout>*{min-width:0}.product-photo{background:var(--sand);height:520px;display:flex;align-items:center;justify-content:center;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:cover}.product-photo img.fit-contain{object-fit:contain}.product-detail h1{font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.1;margin:8px 0 16px}.product-price{font:600 22px 'DM Mono',monospace;color:var(--orange);margin-bottom:22px}.product-detail .desc{color:var(--muted);line-height:1.7;font-size:1.02rem;margin:0 0 30px;padding-bottom:28px;border-bottom:1px solid var(--line)}.product-detail .button{padding:16px 22px;font-size:.88rem}.reassure{margin-top:16px;color:var(--muted);font-size:.85rem;line-height:1.6}.not-found{padding:120px 0;text-align:center}@media(max-width:760px){.product-layout{grid-template-columns:1fr;gap:32px}.product-photo{height:380px}}</style></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Product — UNIQLIURZ</title><link rel="stylesheet" href="pages.css"><style>.product-view{padding:60px 0 90px}.back-link{display:inline-block;margin-bottom:28px;font:500 12px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}.back-link:hover{color:var(--orange)}.product-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:60px;align-items:start}.product-layout>*{min-width:0}.product-photo{background:var(--sand);height:520px;display:flex;align-items:center;justify-content:center;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:cover}.product-photo img.fit-contain{object-fit:contain}.product-thumbs{display:flex;gap:10px;margin-top:12px}.product-thumbs button{border:1px solid var(--line);padding:0;width:74px;height:74px;background:var(--sand);cursor:pointer;overflow:hidden}.product-thumbs button.active{border-color:var(--orange);border-width:2px}.product-thumbs img{width:100%;height:100%;object-fit:cover}.product-detail h1{font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.1;margin:8px 0 16px}.product-price{font:600 22px 'DM Mono',monospace;color:var(--orange);margin-bottom:22px}.product-detail .desc{color:var(--muted);line-height:1.7;font-size:1.02rem;margin:0 0 30px;padding-bottom:28px;border-bottom:1px solid var(--line)}.product-detail .button{padding:16px 22px;font-size:.88rem}.reassure{margin-top:16px;color:var(--muted);font-size:.85rem;line-height:1.6}.not-found{padding:120px 0;text-align:center}@media(max-width:760px){.product-layout{grid-template-columns:1fr;gap:32px}.product-photo{height:380px}}</style></head>
 <body><div class="top">Custom-made gifts with heart — made for your moment.</div><header class="nav"><div class="wrap"><a class="logo" href="index.html">uniqli<em>•</em>urz</a><nav class="links"><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="shop.html">Shop</a><a href="services.html">Services</a><a href="corporate.html">Corporate</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav></div></header>
 <main>
-<section class="wrap product-view" id="product-view" style="display:none"><a class="back-link" href="shop.html">← Back to shop</a><div class="product-layout"><div class="product-photo"><img id="p-img" src="" alt=""></div><div class="product-detail"><div class="eyebrow">UNIQLIURZ</div><h1 id="p-name"></h1><div class="product-price" id="p-price"></div><p class="desc" id="p-desc"></p><a class="button" id="p-customize" href="contact.html">Customize This Piece →</a><p class="reassure">Tell us the name, colours, message, or photo you'd like — we'll confirm every detail with you before we begin.</p></div></div></section>
+<section class="wrap product-view" id="product-view" style="display:none"><a class="back-link" href="shop.html">← Back to shop</a><div class="product-layout"><div><div class="product-photo"><img id="p-img" src="" alt=""></div><div class="product-thumbs" id="p-thumbs"></div></div><div class="product-detail"><div class="eyebrow">UNIQLIURZ</div><h1 id="p-name"></h1><div class="product-price" id="p-price"></div><p class="desc" id="p-desc"></p><a class="button" id="p-customize" href="contact.html">Customize This Piece →</a><p class="reassure">Tell us the name, colours, message, or photo you'd like — we'll confirm every detail with you before we begin.</p></div></div></section>
 <section class="wrap not-found" id="not-found" style="display:none"><div class="eyebrow">Not found</div><h1>We couldn't find that piece.</h1><p class="lead" style="margin:18px auto 30px">It may have been renamed or retired. Browse the shop to find something you'll love.</p><a class="button" href="shop.html">Back to shop →</a></section>
 </main>
 <footer><div class="wrap"><a class="logo" href="index.html">uniqli<em>•</em>urz</a><p>Where Every Creation Tells A Story</p></div></footer>
 <script>
 const PRODUCTS = {
-  "sports-backpack": {name:"Personalized Sports Backpack", price:58, img:"assets/sports-backpack.jpg", alt:"Personalized soccer-themed kids sports backpack", desc:"A durable school backpack customised with your child's name and favourite sport."},
-  "paper-flower-shadow-box": {name:"Paper Flower Monogram Shadow Box", price:65, img:"assets/paper-flower-shadow-box.jpg", alt:"Paper flower monogram shadow box", desc:"A framed paper-flower wreath around a glittered monogram, finished with gilded butterflies."},
-  "resin-name-plaque": {name:"Resin Name Plaque", price:85, img:"assets/resin-name-plaque.jpg", alt:"Resin name plaque with dried florals and gold leaf", desc:"Freestanding resin letters filled with dried florals and gold leaf, spelling out a name of your choice."},
-  "teacher-tshirt": {name:"Teacher Appreciation T-Shirt", price:24, img:"assets/teacher-tshirt.jpg", alt:"Teacher appreciation printed t-shirts", desc:"A soft cotton tee printed with a heartfelt teacher message — a thoughtful end-of-year gift."},
-  "gamer-night-light": {name:"Gamer Night Light", price:30, img:"assets/gamer-night-light.jpg", alt:"Color-changing acrylic gamer night light", desc:"A colour-changing acrylic night light engraved with a cheeky bedtime message, for the gamer who needs five more minutes."},
-  "gayatri-plaque": {name:"Engraved Gayatri Mantra Plaque", price:48, img:"assets/gayatri-plaque.jpg", alt:"Engraved Gayatri Mantra glass plaque with brass diyas", desc:"A glass plaque laser-engraved with the Gayatri Mantra in Sanskrit and English, paired beautifully with diya stands."},
-  "photo-portrait-plaque": {name:"Engraved Photo Portrait Plaque", price:52, img:"assets/photo-portrait-plaque.jpg", alt:"Engraved photo portrait plaque on wood base", desc:"Your favourite photo laser-etched into glass or acrylic on a wooden base — a keepsake that catches the light."},
-  "coffee-shop-tshirt": {name:"Branded Coffee Shop T-Shirt", price:22, img:"assets/coffee-shop-tshirt.jpg", alt:"Branded coffee shop t-shirts", desc:"Custom illustrated tees for cafes and small businesses, printed with your logo and brand mascot."},
-  "resin-ocean-board": {name:"Resin Ocean Serving Board", price:95, img:"assets/resin-ocean-board.jpg", alt:"Resin ocean serving board with sand and shells", desc:"A hand-poured resin coastline scene on a wooden board, finished with real sand and shells."},
-  "luggage-tag": {name:"Personalized Leather Luggage Tags", price:18, img:"assets/leather-journal.jpg", alt:"Engraved leather luggage tag", desc:"Engraved vegan-leather luggage tags with a name or monogram — sold as a set."},
-  "leather-journal": {name:"Personalized Leather Journal", price:34, img:"assets/luggage-tag.jpg", alt:"Debossed leather journal", desc:"A vegan-leather journal debossed with initials or a full name — lined pages inside."},
-  "family-calendar": {name:"Personalized Family Dry-Erase Calendar", price:42, img:"assets/family-calendar.jpg", alt:"Personalized family dry-erase calendar", desc:"A reusable dry-erase calendar board personalised with your family name — the command centre for a busy house."},
-  "ombre-water-bottle": {name:"Engraved Ombré Water Bottle", price:36, img:"assets/ombre-water-bottle.jpg", alt:"Engraved ombre water bottle", desc:"An insulated steel bottle in a soft colour fade, laser-engraved with a name in a flowing script."},
-  "resin-award-plaque": {name:"Custom Resin Award Plaque", price:78, img:"assets/resin-award-plaque.jpg", alt:"Custom resin award plaque with glitter edge", desc:"A glitter-edged resin plaque personalised with a name and message — perfect for team, club, or community recognition."},
-  "puzzle-plaque": {name:"Custom Milestone Puzzle Plaque", price:58, img:"assets/puzzle-plaque.jpg", alt:"Custom puzzle-piece milestone birthday plaque", desc:"A puzzle-piece-shaped wooden plaque personalised for a milestone birthday or anniversary."},
-  "photo-letter-lamp": {name:"Personalized Photo Letter Lamp", price:72, img:"assets/photo-letter-lamp.jpg", alt:"Personalized photo letter block lamp", desc:"Light-up wooden letters filled with your favourite photos, mounted on a personalised name block."},
-  "novelty-socks": {name:"Personalized Novelty Socks", price:16, img:"assets/novelty-socks.jpg", alt:"Personalized novelty socks", desc:"Soft crew socks printed with a cheeky custom message on the sole — always good for a laugh."},
-  "marble-wood-board": {name:"Custom Engraved Marble & Wood Board", price:62, img:"assets/marble-wood-board.jpg", alt:"Engraved marble and wood serving board", desc:"A marble-and-acacia serving board laser-engraved with a name, logo, or message — a keepsake gift with everyday use."},
-  "coach-tumbler": {name:"Personalized Coach Tumbler", price:28, img:"assets/coach-tumbler.jpg", alt:"Personalized coach-style insulated tumbler", desc:"An insulated steel tumbler wrapped and printed with a name and team icon — a team-gifting favourite."},
-  "gift-basket": {name:"Client Appreciation Gift Basket", price:110, img:"assets/gift-basket.jpg", alt:"Client appreciation gift basket", desc:"A curated basket pairing our journal, luggage tags, and coasters with a bottle and glass — ready to gift."},
-  "slate-coasters": {name:"Personalized Slate Coasters", price:38, img:"assets/slate-coasters.jpg", alt:"Engraved slate coaster set with quotes", desc:"A set of natural slate coasters engraved with a message or quote — a thoughtful appreciation gift."},
-  "branded-team-tshirts": {name:"Custom Branded Team T-Shirts", price:20, img:"assets/branded-team-tshirts.jpg", alt:"Custom branded team t-shirts", desc:"Bulk printed t-shirts for clubs, teams, and school groups, priced per set with your logo included."},
-  "family-name-resin-sign": {name:"Personalized Family Name Resin Sign", price:145, img:"assets/family-name-resin-sign.jpg", alt:"Personalized family name resin wall sign", desc:"A large hand-poured resin sign with your family name set into a glittered sunset landscape."},
-  "photo-collage-lightbox": {name:"Illuminated Photo Collage Light Box", price:98, img:"assets/photo-collage-lightbox.jpg", alt:"Illuminated photo collage memory light box", desc:"A backlit memory box framed with family photos and charms, personalised for a milestone birthday."},
-  "resin-ocean-wall-art": {name:"Framed Resin Ocean Wall Art", price:88, img:"assets/resin-ocean-wall-art.jpg", alt:"Framed resin ocean wall art with turtle and starfish", desc:"A framed resin seascape with sea glass, shells, and a hand-set turtle and starfish, ready to hang."},
-  "lego-wall-clock": {name:"Custom Lego-Brick Wall Clock", price:54, img:"assets/lego-wall-clock.jpg", alt:"Custom Lego-brick wall clock", desc:"A playful working wall clock built from a Lego baseplate, personalised with a favourite theme."},
-  "dad-gift-set": {name:"Dad Gift Set — Tumbler & Socks", price:52, img:"assets/dad-gift-set.jpg", alt:"Personalized Dad tumbler and socks gift set", desc:"A boxed set pairing an engraved tumbler with a pair of playful socks, ready to gift."},
-  "engraved-travel-mug": {name:"Engraved Travel Mug", price:32, img:"assets/engraved-travel-mug.jpg", alt:"Engraved travel mug with handle", desc:"An insulated handled travel mug laser-engraved with a name and message — a daily-use keepsake."},
-  "resin-monogram-keychain": {name:"Resin Monogram Keychain", price:16, img:"assets/resin-monogram-keychain.jpg", alt:"Resin monogram keychain with pressed flowers", desc:"A single initial cast in clear resin with pressed florals and gold flecks — a small everyday keepsake."},
-  "team-luggage-tags": {name:"Custom Team Luggage Tags", price:60, img:"assets/team-luggage-tags.jpg", alt:"Custom engraved team luggage tags, bulk set", desc:"Engraved leather luggage tags produced in bulk for a team or school group, each individually personalised."},
-  "cake-topper-set": {name:"Custom Cake Topper Set", price:24, img:"assets/cake-topper-set.jpg", alt:"Custom paper cake topper set", desc:"A personalised paper cake topper and bunting set designed around your theme and colours."}
+  "coach-tumbler-set": {name:"Personalized Coach Tumbler Set", price:32, images:["assets/coach-tumbler-1.png","assets/coach-tumbler-2.png","assets/coach-tumbler-3.png"], alt:"Personalized insulated tumbler with coach name and swim logo", desc:"An insulated steel tumbler engraved with a coach's name and a swim-team icon — a favourite end-of-season thank-you gift, available in matte finishes."},
+  "family-command-calendar": {name:"Personalized Family Command Center", price:68, images:["assets/family-command-calendar-1.png","assets/family-command-calendar-2.png"], alt:"Personalized dry-erase family command center calendar", desc:"A framed dry-erase calendar personalised with your family name, complete with a notes panel and magnetic markers — the command centre for a busy household."},
+  "sports-backpack": {name:"Personalized Sports Backpack", price:58, images:["assets/sports-backpack-1.png","assets/sports-backpack-2.png"], alt:"Personalized soccer-themed kids sports backpack", desc:"A durable school backpack customised with your child's name and favourite sport — printed edge to edge in vivid colour."},
+  "floral-monogram-shadow-box": {name:"Floral Monogram Shadow Box", price:65, images:["assets/floral-monogram-shadow-box.png"], alt:"Paper flower monogram shadow box", desc:"A framed paper-flower wreath around a glittered monogram, finished with gilded butterflies."},
+  "resin-name-plaque": {name:"Resin Name Plaque", price:85, images:["assets/resin-name-plaque.png"], alt:"Resin name plaque with gold flecks on wooden stand", desc:"Freestanding resin letters filled with gold leaf and colour, spelling out a name of your choice on a wooden base."},
+  "teacher-tshirt": {name:"Teacher Appreciation T-Shirt", price:24, images:["assets/teacher-tshirt.png"], alt:"Teacher appreciation printed t-shirt", desc:"A soft cotton tee printed with a heartfelt teacher message — a thoughtful end-of-year gift."},
+  "gayatri-plaque": {name:"Engraved Gayatri Mantra Plaque", price:48, images:["assets/gayatri-plaque.png"], alt:"Engraved Gayatri Mantra glass plaque on wood base", desc:"A glass plaque laser-engraved with the Gayatri Mantra in Sanskrit and English, set on a warm wooden base."},
+  "photo-portrait-plaque": {name:"Engraved Photo Portrait Plaque", price:52, images:["assets/photo-portrait-plaque.png"], alt:"Engraved photo portrait plaque on wood base", desc:"Your favourite photo laser-etched into glass on a wooden base — a keepsake that catches the light."},
+  "silver-jubilee-plaque": {name:"Silver Jubilee Anniversary Plaque", price:92, images:["assets/silver-jubilee-plaque-1.png","assets/silver-jubilee-plaque-2.png"], alt:"Silver jubilee anniversary plaque in presentation box", desc:"A crystal-edged commemorative plaque personalised with a heartfelt message, presented in a velvet-lined box — a cherished anniversary keepsake."},
+  "lego-wall-clock": {name:"Custom Lego-Brick Wall Clock", price:54, images:["assets/lego-wall-clock.png"], alt:"Custom Lego-brick wall clock", desc:"A playful working wall clock built from a Lego baseplate, personalised with a favourite theme."},
+  "novelty-socks": {name:"Personalized Novelty Socks", price:16, images:["assets/novelty-socks.png"], alt:"Personalized novelty socks", desc:"Soft crew socks printed with a cheeky custom message on the sole — always good for a laugh."},
+  "engraved-travel-tumbler": {name:"Engraved Travel Tumbler", price:32, images:["assets/engraved-travel-tumbler.png"], alt:"Engraved travel tumbler with handle", desc:"An insulated handled tumbler laser-engraved with a name and message — a daily-use keepsake for the best dad, mom, or friend."},
+  "resin-monogram-keychain": {name:"Resin Monogram Keychain", price:16, images:["assets/resin-monogram-keychain.png"], alt:"Resin monogram keychain with gold flecks", desc:"A single initial cast in clear resin with gold flecks and colour — a small everyday keepsake."},
+  "puzzle-milestone-plaque": {name:"Custom Milestone Puzzle Plaque", price:58, images:["assets/puzzle-milestone-plaque.png"], alt:"Custom puzzle-piece milestone birthday plaque", desc:"A puzzle-piece-shaped plaque personalised for a milestone birthday or anniversary, in your choice of colour."},
+  "team-luggage-tags": {name:"Custom Team Luggage Tags", price:60, images:["assets/team-luggage-tags-1.png","assets/team-luggage-tags-2.png"], alt:"Custom engraved team luggage tags, bulk set", desc:"Printed leather-look luggage tags produced in bulk for a team or school group, each carrying your mascot and colours."},
+  "branded-club-tshirts": {name:"Custom Branded Club T-Shirts", price:20, images:["assets/branded-club-tshirts-1.png","assets/branded-club-tshirts-2.png"], alt:"Custom branded club and school t-shirts", desc:"Bulk printed t-shirts for clubs, teams, and school groups, priced per set with your logo included."},
+  "school-water-bottles": {name:"Personalized School Water Bottles", price:36, images:["assets/school-water-bottles-1.png","assets/school-water-bottles-2.png"], alt:"Personalized ombre water bottles with names", desc:"Insulated steel bottles in a soft colour fade, engraved with a name in flowing script — a favourite for school and sport."},
+  "family-name-resin-sign": {name:"Personalized Family Name Resin Sign", price:145, images:["assets/family-name-resin-sign-new-1.png","assets/family-name-resin-sign-new-2.png"], alt:"Personalized family name resin wall sign", desc:"A large hand-poured resin sign with your family name set into a glittered sunset landscape, ready to hang."},
+  "sports-award-plaque": {name:"Custom Resin Sports Award Plaque", price:95, images:["assets/sports-award-plaque-1.png","assets/sports-award-plaque-2.png"], alt:"Custom resin sports award plaque with crystal edge", desc:"A crystal-edged resin plaque personalised with a team name and message — perfect for club or league recognition, presented in a display case."},
+  "recognition-award-plaque": {name:"Personalized Recognition Award Plaque", price:98, images:["assets/recognition-award-plaque-1.png","assets/recognition-award-plaque-2.png"], alt:"Personalized recognition award plaque with gemstone edge", desc:"A gemstone-edged resin award personalised with a name and message of gratitude, mounted on a wooden stand with nameplate."},
+  "photo-collage-lightbox": {name:"Illuminated Photo Collage Light Box", price:98, images:["assets/photo-collage-lightbox-new.png"], alt:"Illuminated photo collage memory light box", desc:"A backlit memory box framed with family photos and charms, personalised for a milestone birthday."},
+  "abstract-geode-wall-art": {name:"Abstract Geode Resin Wall Art", price:120, images:["assets/abstract-geode-wall-art.png"], alt:"Abstract geode-style resin wall art sculpture", desc:"A richly layered resin sculpture in a jewel-toned palette with gold leaf accents — a striking statement piece for any room."},
+  "engraved-cutting-board": {name:"Engraved Wood & Marble Cutting Board", price:62, images:["assets/engraved-cutting-board.png"], alt:"Engraved marble and wood serving board", desc:"A marble-and-acacia serving board laser-engraved with a name, logo, or message — a keepsake gift with everyday use."}
 };
 const id = new URLSearchParams(location.search).get('id');
 const product = PRODUCTS[id];
 if (product) {
   document.title = product.name + " — UNIQLIURZ";
-  document.getElementById('p-img').src = product.img;
-  document.getElementById('p-img').alt = product.alt;
+  const img = document.getElementById('p-img');
+  const thumbs = document.getElementById('p-thumbs');
+  function checkFit(){
+    const box = img.parentElement;
+    const boxRatio = box.clientWidth / box.clientHeight;
+    const imgRatio = img.naturalWidth / img.naturalHeight;
+    img.classList.remove('fit-contain');
+    if (!imgRatio || !boxRatio) return;
+    if (imgRatio/boxRatio < 0.62 || imgRatio/boxRatio > 1.65) { img.classList.add('fit-contain'); }
+  }
+  function showImage(src, i){
+    img.src = src;
+    img.alt = product.alt;
+    if (img.complete && img.naturalWidth) checkFit(); else img.addEventListener('load', checkFit, {once:true});
+    [...thumbs.children].forEach((b,bi) => b.classList.toggle('active', bi === i));
+  }
+  showImage(product.images[0], 0);
+  if (product.images.length > 1) {
+    product.images.forEach((src, i) => {
+      const b = document.createElement('button');
+      b.className = i === 0 ? 'active' : '';
+      b.innerHTML = '<img src="' + src + '" alt="">';
+      b.addEventListener('click', () => showImage(src, i));
+      thumbs.appendChild(b);
+    });
+  }
   document.getElementById('p-name').textContent = product.name;
   document.getElementById('p-price').textContent = 'From $' + product.price;
   document.getElementById('p-desc').textContent = product.desc;
   document.getElementById('p-customize').href = 'contact.html?product=' + encodeURIComponent(id) + '&name=' + encodeURIComponent(product.name);
   document.getElementById('product-view').style.display = 'block';
-  const img = document.getElementById('p-img');
-  function checkFit(){
-    const box = img.parentElement;
-    const boxRatio = box.clientWidth / box.clientHeight;
-    const imgRatio = img.naturalWidth / img.naturalHeight;
-    if (!imgRatio || !boxRatio) return;
-    if (imgRatio/boxRatio < 0.62 || imgRatio/boxRatio > 1.65) { img.classList.add('fit-contain'); }
-  }
-  if (img.complete && img.naturalWidth) checkFit(); else img.addEventListener('load', checkFit);
 } else {
   document.getElementById('not-found').style.display = 'block';
 }
