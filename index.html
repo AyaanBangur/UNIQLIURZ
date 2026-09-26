@@ -20,9 +20,6 @@
   <script>
     (function () {
       var el = document.getElementById('brand-intro');
-      var alreadyShown = true;
-      try { alreadyShown = !!sessionStorage.getItem('uq_intro_shown'); sessionStorage.setItem('uq_intro_shown', '1'); } catch (e) {}
-      if (alreadyShown) { el.remove(); return; }
       el.addEventListener('animationend', function (e) {
         if (e.animationName === 'bi-overlay-out') el.remove();
       });
